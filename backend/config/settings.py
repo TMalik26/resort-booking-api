@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     # dj-rest-auth
     "dj_rest_auth",
     # my apps
-    "users",
+    # "users",
 ]
 
 AUTH_USER_MODEL = "users.User"
@@ -92,7 +92,7 @@ REST_AUTH = {
     "JWT_AUTH_SECURE": True,  # Set to True in production (HTTPS)
     "JWT_AUTH_SAMESITE": "None",
     "JWT_AUTH_COOKIE_USE_CSRF": True,
-    "LOGIN_SERIALIZER": "users.serializers.public_serializers.CustomLoginSerializer",
+    # "LOGIN_SERIALIZER": "users.serializers.public_serializers.CustomLoginSerializer",
 }
 
 # In your email template or settings
@@ -122,8 +122,8 @@ EMAIL_USE_TLS = True
 
 # for swagger api documentation
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Crarwood.Chalet API",
-    "DESCRIPTION": "Crarwood.Chalet API Documentation",
+    "TITLE": "Resort API",
+    "DESCRIPTION": "Resort API Documentation",
     "VERSION": "1.0.0",
     "SERVE_INCLUDE_SCHEMA": False,
     # OTHER SETTINGS
