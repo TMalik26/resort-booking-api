@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     # dj-rest-auth
     "dj_rest_auth",
     # my apps
-    # "users",
+    "users",
 ]
 
 AUTH_USER_MODEL = "users.User"
@@ -92,7 +92,7 @@ REST_AUTH = {
     "JWT_AUTH_SECURE": True,  # Set to True in production (HTTPS)
     "JWT_AUTH_SAMESITE": "None",
     "JWT_AUTH_COOKIE_USE_CSRF": True,
-    # "LOGIN_SERIALIZER": "users.serializers.public_serializers.CustomLoginSerializer",
+    "LOGIN_SERIALIZER": "users.serializers.public_serializers.CustomLoginSerializer",
 }
 
 # In your email template or settings
