@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "dj_rest_auth",
     # my apps
     "users",
+    "accommodation",
 ]
 
 AUTH_USER_MODEL = "users.User"
@@ -70,6 +71,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
+ACCOUNT_SIGNUP_FIELDS = ['username*', 'email*', 'password1*', 'password2*']
 ACCOUNT_LOGIN_METHODS = {"email"}
 AUTHENTICATION_BACKENDS = [
     "allauth.account.auth_backends.AuthenticationBackend",
