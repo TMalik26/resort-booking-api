@@ -55,6 +55,8 @@ INSTALLED_APPS = [
     "dj_rest_auth",
     # my apps
     "users",
+    "accommodation",
+    "storage",
 ]
 
 AUTH_USER_MODEL = "users.User"
@@ -70,6 +72,7 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
 ]
 
+ACCOUNT_SIGNUP_FIELDS = ["username*", "email*", "password1*", "password2*"]
 ACCOUNT_LOGIN_METHODS = {"email"}
 AUTHENTICATION_BACKENDS = [
     "allauth.account.auth_backends.AuthenticationBackend",
@@ -165,6 +168,11 @@ DATABASES = {
     }
 }
 
+
+# Supabase Storage settings
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
+SUPABASE_BUCKET_PROPERTIES = "properties"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
